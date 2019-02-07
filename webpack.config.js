@@ -17,6 +17,13 @@ module.exports = {
         ]
     },
     plugins: [
-        // new HtmlWebpackPlugin({template: './src/index.html'}),
-    ]
+        new HtmlWebpackPlugin({
+            template: path.join(__dirname, 'src', 'index.html')
+        }),
+    ],
+    devServer: {
+        contentBase: path.join(__dirname, 'bundle'),
+        compress: true,
+        port: 9000
+    }
 };
