@@ -1,16 +1,22 @@
 import React, { Component } from 'react';
 
 class ReadySkills extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      skills: this.props.skills,
+    }
+  }
+
   render() {
     return (
       <div className="ready-skills">
         <ul className="ready-skills--list">
-          <li className="ready-skills--item">Родить ребенка</li>
-          <li className="ready-skills--item">Построить дом</li>
-          <li className="ready-skills--item">Посадить дерево</li>
+          {this.props.skills.map((skill, index) => <li key={index} className="ready-skills--item">{skill}</li>)}
         </ul>
       </div>
-  );
+    );
   }
 }
 
