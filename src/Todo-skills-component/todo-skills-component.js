@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
-import './todo-skills-component.css';
 
 class TodoSkills extends Component {
   render() {
     return (
-      <div className="todo-skills"></div>
+      <div className="todo-skills">
+        <ul className="todo-skills--list">
+          <li className="todo-skills--item">Родить ребенка</li>
+          <li className="todo-skills--item">Построить дом</li>
+          <li className="todo-skills--item">Посадить дерево</li>
+        </ul>
+      </div>
     );
   }
 }

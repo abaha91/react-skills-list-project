@@ -15,7 +15,7 @@ module.exports = {
         rules: [
             { test: /\.js$/, exclude: /node_modules/, loader: "babel-loader" },
             {
-                test: /\.css$/,
+                test: /\.scss$/,
                 use: [
                     {
                         loader: MiniCssExtractPlugin.loader,
@@ -24,6 +24,7 @@ module.exports = {
                         }
                     },
                     "css-loader",
+                    "sass-loader",
                 ]
             }
         ]
@@ -41,6 +42,6 @@ module.exports = {
         contentBase: path.join(__dirname, 'bundle'),
         compress: true,
         port: 4300,
-        // hot: true,
+        hot: true,
     }
 };
