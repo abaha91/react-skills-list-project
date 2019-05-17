@@ -7,9 +7,7 @@ import ReadySkills from "./Ready-skills-component/ready-skills-component";
 import NewSkill from "./New-skill-component/new-skill-component";
 
 export class App extends React.Component {
-
   render() {
-    console.log(this.props);
     return (
       <div className="App">
         <Header />
@@ -21,7 +19,6 @@ export class App extends React.Component {
       </div>
     );
   }
-
 }
 
 let mapStateToProps = state => {

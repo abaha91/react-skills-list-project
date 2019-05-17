@@ -1,4 +1,9 @@
-export const addTodo = text => ({
-  type: 'ADD_TODO',
-  text: '555',
+export const changeValue = text => ({
+  type: 'CHANGE_VALUE',
+  text: text,
+});
+
+export const toAddSkill = text => ({
+  type: 'TO_ADD_SKILL',
+  text: text,
 });
