@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { removeTodo } from '../actions/index';
+
 
 class ReadySkills extends Component {
 

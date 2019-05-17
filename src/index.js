@@ -1,6 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import WrappedApp from './App';
+import { Provider } from 'react-redux';
+import store from './state/reducer';
 
 
-ReactDOM.render(<App/>, document.getElementById('app'));
+ReactDOM.render(
+  <Provider store={store}>
+    <WrappedApp/>
+  </Provider>, document.getElementById('app'));
