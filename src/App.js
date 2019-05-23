@@ -12,18 +12,17 @@ export class App extends React.Component {
       <div className="App">
         <Header />
         <div className="todo-lists--wrapper">
-          <TodoSkills skills={this.props.tasks}/>
+          <TodoSkills skills={this.props.skills}/>
           <ReadySkills skills={this.props.readyTasks}/>
         </div>
-        <NewSkill />
+        <NewSkill inputValue={this.props.inputValue}/>
       </div>
     );
   }
 }
-
 let mapStateToProps = state => {
   return {
-    tasks: state.tasks,
+    skills: state.skills,
     readyTasks: state.readyTasks,
   };
 };

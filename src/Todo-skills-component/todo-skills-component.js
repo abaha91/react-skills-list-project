@@ -1,23 +1,28 @@
 import React, { Component } from 'react';
+import { connect } from "react-redux";
 
 class TodoSkills extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      key: 0,
-      skills: this.props.skills,
-    }
   }
 
   render() {
+    console.log(2);
     return (
       <div className="todo-skills">
         <ul className="todo-skills--list">
-          {this.state.skills.map((skill, index) => <li key={index} className="todo-skills--item">{skill}</li>)}
+          {this.props.skills.map((skill, index) => <li className="todo-skills--item">{skill}</li>)}
         </ul>
       </div>
     );
   }
 }
 
-export default TodoSkills;
+let mapStateToProps = (state) => {
+  console.log(1);
+  return {
+    skills: state.skills
+  };
+};
+
+export default connect(mapStateToProps)(TodoSkills);
