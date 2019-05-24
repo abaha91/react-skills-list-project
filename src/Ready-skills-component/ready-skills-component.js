@@ -1,11 +1,17 @@
 import React, { Component } from 'react';
-import { removeTodo } from '../actions/index';
+import { toRemoveSkill } from '../actions/index';
 import { connect } from 'react-redux';
 
 class ReadySkills extends Component {
 
   constructor(props) {
     super(props);
+  }
+
+  removeSkill(event, index) {
+    let newReadySkillsList = [...this.props.readySkills];
+    newReadySkillsList.splice(index, 1);
+    this.props.dispatch(toRemoveSkill(newReadySkillsList));
   }
 
   render() {
@@ -15,7 +21,7 @@ class ReadySkills extends Component {
         <ul className="ready-skills--list">
           {this.props.readySkills.map((skill, index) => <li key={index} className="ready-skills--item">
             {skill}
-            <div className="ready-skill--delete"></div>
+            <div className="ready-skill--delete" onClick={event => this.removeSkill(event, index)}></div>
           </li>)}
         </ul>
       </div>

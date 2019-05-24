@@ -3,7 +3,12 @@ export const changeValue = text => ({
   text: text,
 });
 
-export const toAddSkill = text => ({
+export const toAddSkill = skillsList => ({
   type: 'TO_ADD_SKILL',
-  text: text,
+  skillsList: skillsList,
+});
+
+export const toRemoveSkill = readySkillsList => ({
+  type: 'TO_REMOVE_SKILL',
+  readySkills: readySkillsList,
 });

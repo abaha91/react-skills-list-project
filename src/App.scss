@@ -57,10 +57,19 @@ body {
     position:absolute;
     width: 24px;
     height: 24px;
-    border: 1px solid #ccc;
     right: 20px;
     top: 6px;
-    background: url('/img/icons/delete.svg')
+    background: url('../src/img/icons/delete.svg');
+    cursor: pointer;
+}
+.todo-skill--done {
+    position:absolute;
+    width: 24px;
+    height: 24px;
+    right: 20px;
+    top: 6px;
+    background: url('../src/img/icons/done.svg');
+    cursor: pointer;
 }
 .new-skill {
     padding: 0 20px;

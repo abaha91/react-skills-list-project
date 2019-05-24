@@ -6,9 +6,11 @@ function appState (state = initialState, action) {
       case 'CHANGE_VALUE':
             return { ...state, inputValue: action.text };
             break;
-            case 'TO_ADD_SKILL':
-            state.skills.push(action.text);
-            return {...state, skills: action.skills}
+      case 'TO_ADD_SKILL':
+            return {...state, skills: action.skillsList};
+            break;
+            case 'TO_REMOVE_SKILL':
+            return {...state, readySkills: action.readySkills};
             break;
       }
       return state

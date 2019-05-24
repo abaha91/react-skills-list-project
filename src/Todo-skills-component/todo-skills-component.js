@@ -11,7 +11,10 @@ class TodoSkills extends Component {
       <div className="todo-skills">
         <p>Планируется изучить</p>
         <ul className="todo-skills--list">
-          {this.props.skills.map((skill, index) => <li className="todo-skills--item" key={index}>{skill}</li>)}
+          {this.props.skills.map((skill, index) => <li className="todo-skills--item" key={index}>
+            {skill}
+            <div className="todo-skill--done"></div>
+          </li>)}
         </ul>
       </div>
     );

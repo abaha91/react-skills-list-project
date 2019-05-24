@@ -15,10 +15,7 @@ class NewSkill extends Component {
 
   toAddSkill(event) {
     event.preventDefault();
-    this.props.dispatch({
-      type: 'TO_ADD_SKILL',
-      skills: [...this.props.skills, this.props.inputValue],
-    })
+    this.props.dispatch(toAddSkill([...this.props.skills, this.props.inputValue]))
   }
 
   render() {
@@ -34,7 +31,6 @@ class NewSkill extends Component {
 }
 
 let mapStateToProps = (state) => {
-  console.log(1);
   return {
     inputValue: state.inputValue,
     skills: state.skills,
