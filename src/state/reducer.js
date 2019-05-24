@@ -7,10 +7,13 @@ function appState (state = initialState, action) {
             return { ...state, inputValue: action.text };
             break;
       case 'TO_ADD_SKILL':
-            return {...state, skills: action.skillsList};
+            return {...state, skills: action.skillsList, inputValue: ''};
             break;
-            case 'TO_REMOVE_SKILL':
+      case 'TO_REMOVE_SKILL':
             return {...state, readySkills: action.readySkills};
+            break;
+            case 'TO_FINISH_SKILL':
+            return {...state, skills: action.skills, readySkills: action.readySkills};
             break;
       }
       return state
