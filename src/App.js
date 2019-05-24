@@ -12,10 +12,10 @@ export class App extends React.Component {
       <div className="App">
         <Header />
         <div className="todo-lists--wrapper">
-          <TodoSkills skills={this.props.skills}/>
-          <ReadySkills skills={this.props.readyTasks}/>
+          <TodoSkills/>
+          <ReadySkills/>
         </div>
-        <NewSkill inputValue={this.props.inputValue}/>
+        <NewSkill/>
       </div>
     );
   }
@@ -23,7 +23,8 @@ export class App extends React.Component {
 let mapStateToProps = state => {
   return {
     skills: state.skills,
-    readyTasks: state.readyTasks,
+    readySkills: state.readySkills,
+    inputValue: state.inputValue,
   };
 };
 

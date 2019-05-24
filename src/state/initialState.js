@@ -1,7 +1,7 @@
 let initialState = {
   inputValue: '',
-  skills: ['Научиться работать с Redux', 'Promises, Async/Await', 'Выполнить все задачи из статьи', 'Проект TODO'],
-  readyTasks: ['Webpack', 'Поработать с NodeJS', 'Методы массивов JS'],
+  skills: ['RxJS', 'TypeScript'],
+  readySkills: ['HTML5', 'CSS', 'JS', 'React', 'Redux', 'Smarty', 'Webpack', 'Npm', 'GIT', 'NodeJS', 'Express'],
 };
 
 export default initialState;

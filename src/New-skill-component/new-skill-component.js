@@ -17,12 +17,11 @@ class NewSkill extends Component {
     event.preventDefault();
     this.props.dispatch({
       type: 'TO_ADD_SKILL',
-      text: this.props.inputValue,
+      skills: [...this.props.skills, this.props.inputValue],
     })
   }
 
   render() {
-    console.log(this.props);
     return (
       <div className="new-skill">
         <form className="new-skill--form">
@@ -35,8 +34,10 @@ class NewSkill extends Component {
 }
 
 let mapStateToProps = (state) => {
+  console.log(1);
   return {
-    inputValue: state.inputValue
+    inputValue: state.inputValue,
+    skills: state.skills,
   }
 };
 

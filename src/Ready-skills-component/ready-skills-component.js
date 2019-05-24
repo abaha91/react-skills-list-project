@@ -1,25 +1,32 @@
 import React, { Component } from 'react';
 import { removeTodo } from '../actions/index';
-
+import { connect } from 'react-redux';
 
 class ReadySkills extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {
-      skills: this.props.skills,
-    }
   }
 
   render() {
     return (
       <div className="ready-skills">
+        <p>Есть опыт работы</p>
         <ul className="ready-skills--list">
-          {this.props.skills.map((skill, index) => <li key={index} className="ready-skills--item">{skill}</li>)}
+          {this.props.readySkills.map((skill, index) => <li key={index} className="ready-skills--item">
+            {skill}
+            <div className="ready-skill--delete"></div>
+          </li>)}
         </ul>
       </div>
     );
   }
 }
 
-export default ReadySkills;
+let mapStateToProps = (state) => {
+  return {
+    readySkills: state.readySkills,
+  }
+}
+
+export default connect(mapStateToProps)(ReadySkills);

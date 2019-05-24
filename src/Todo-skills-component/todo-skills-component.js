@@ -7,11 +7,11 @@ class TodoSkills extends Component {
   }
 
   render() {
-    console.log(2);
     return (
       <div className="todo-skills">
+        <p>Планируется изучить</p>
         <ul className="todo-skills--list">
-          {this.props.skills.map((skill, index) => <li className="todo-skills--item">{skill}</li>)}
+          {this.props.skills.map((skill, index) => <li className="todo-skills--item" key={index}>{skill}</li>)}
         </ul>
       </div>
     );
@@ -19,7 +19,7 @@ class TodoSkills extends Component {
 }
 
 let mapStateToProps = (state) => {
-  console.log(1);
+  console.log(2);
   return {
     skills: state.skills
   };
