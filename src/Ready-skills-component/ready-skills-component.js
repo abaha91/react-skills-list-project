@@ -17,7 +17,7 @@ class ReadySkills extends Component {
   render() {
     return (
       <div className="ready-skills">
-        <p>Есть опыт работы</p>
+        <p className="ready-skills--title">Есть опыт работы</p>
         <ul className="ready-skills--list">
           {this.props.readySkills.map((skill, index) => <li key={index} className="ready-skills--item">
             {skill}

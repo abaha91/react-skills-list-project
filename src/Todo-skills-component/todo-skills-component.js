@@ -20,7 +20,7 @@ class TodoSkills extends Component {
   render() {
     return (
       <div className="todo-skills">
-        <p>Планируется изучить</p>
+        <p className="todo-skills--title">Планируется изучить</p>
         <ul className="todo-skills--list">
           {this.props.skills.map((skill, index) => <li className="todo-skills--item" key={index}>
             {skill}
